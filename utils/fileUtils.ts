@@ -1,0 +1,14 @@
+import type { FileData } from '../types';
+
+export const fileToBase64 = (file: File): Promise<FileData> => {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => {
+      const result = reader.result as string;
+      const base64 = result.split(',')[1];
+      resolve({ base64, mimeType: file.type });
+    };
+    reader.onerror = (error) => reject(error);
+  });
+};
