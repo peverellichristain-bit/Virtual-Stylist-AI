@@ -4,7 +4,7 @@ import { OUTFIT_STYLES } from '../constants';
 
 // Replace 'YOUR_GEMINI_API_KEY_HERE' with your actual Gemini API key
 // Get your API key from: https://aistudio.google.com/apikey
-const API_KEY = 'YOUR_GEMINI_API_KEY_HERE';
+const API_KEY = 'AIzaSyBvRerOdKfoXVueDHJH15wPnmL9I34xn1M';
 
 if (!API_KEY || API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
   throw new Error("Please set your Gemini API key in services/geminiService.ts");
