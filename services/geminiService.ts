@@ -2,9 +2,12 @@ import { GoogleGenAI, Modality } from "@google/genai";
 import type { Outfit, UserProfile } from '../types';
 import { OUTFIT_STYLES } from '../constants';
 
-const API_KEY = process.env.API_KEY;
-if (!API_KEY) {
-  throw new Error("API_KEY environment variable not set");
+// Replace 'YOUR_GEMINI_API_KEY_HERE' with your actual Gemini API key
+// Get your API key from: https://aistudio.google.com/apikey
+const API_KEY = 'YOUR_GEMINI_API_KEY_HERE';
+
+if (!API_KEY || API_KEY === 'YOUR_GEMINI_API_KEY_HERE') {
+  throw new Error("Please set your Gemini API key in services/geminiService.ts");
 }
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
