@@ -3,7 +3,7 @@ import type { Outfit, UserProfile } from '../types';
 import { OUTFIT_STYLES } from '../constants';
 
 // Gemini API key
-const API_KEY = 'AIzaSyBvRerOdKfoXVueDHJH15wPnmL9I34xn1M';
+const API_KEY = "AIzaSyBvRerOdKfoXVueDHJH15wPnmL9I34xn1M";
 
 const ai = new GoogleGenAI({ apiKey: API_KEY });
 const model = 'gemini-2.5-flash-image';
